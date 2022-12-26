@@ -223,12 +223,12 @@ abstract class ResourceTestCase extends TestCase
                 break;
             case StringBodyTransformer::class:
                 /* @var string $response */
-                self::assertInternalType('string', $response);
+                self::assertIsString( $response);
                 $bodyArray = json_decode($response, true);
                 break;
             case ArrayBodyTransformer::class:
                 /* @var array $response */
-                self::assertInternalType('array', $response);
+                self::assertIsArray( $response);
                 $bodyArray = $response;
                 break;
             default:
